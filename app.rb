@@ -16,7 +16,6 @@ class Game
     @player2 = gets.chomp
     display_player_symbol_prompt
     @symbol2 = gets.chomp.upcase
-    display_welcome(@player1, @player2)
     @board = Array.new(3) { Array.new(3, " ") }
   end
 
