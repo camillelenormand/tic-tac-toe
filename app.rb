@@ -4,6 +4,7 @@ Bundler.require
 
 # Require the display module
 require_relative "lib/display"
+require_relative "lib/player"
 
 # Define the Game class
 class Game
@@ -32,6 +33,9 @@ class Game
     @symbol2 = gets.chomp.upcase
     # Create a new 3x3 board
     @board = Array.new(3) { Array.new(3, " ") }
+    Player.new(@player1, @symbol1)
+    Player.new(@player2, @symbol2)
+    display_welcome(@player1, @player2)
   end
 
   # Display the game board
@@ -52,7 +56,7 @@ class Game
   # Make a move on the board
   def make_move(player, symbol)
     # Prompt the player to enter their move
-    puts "#{player}, it's your turn (#{symbol}). Enter your move (row, column): "
+    puts "#{player}, it's your turn! (#{symbol}). Enter your move (row, column): "
     # Get the player's move from the user
     row, col = gets.chomp.split(",").map(&:to_i)
     # Check if the move is valid

@@ -7,12 +7,10 @@ module Display
     puts "|           Welcome to the Tic Tac Toe game!             |"
     puts "|                                                        |"
     puts " -------------------------------------------------------- "
-    gets.chomp
   end
 
   def display_player_name_prompt
     puts "Enter the name of the player:"
-    gets.chomp
   end
 
   def display_player_symbol_prompt
@@ -20,7 +18,7 @@ module Display
   end
 
   def display_welcome(player1, player2)
-    puts "Welcome #{player1.name} & #{player2.name}. Let's play!"
+    puts "Welcome #{player1} & #{player2}. Let's play!"
   end
 
   def display_player_turn_prompt(name, symbol)
@@ -32,7 +30,7 @@ module Display
   end
 
   def display_draw
-    puts "It's a draw hahaha. You sucks! Both of you!"
+    puts "It's a draw hahaha."
   end
 
 end
