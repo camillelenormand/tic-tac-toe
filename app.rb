@@ -101,7 +101,7 @@ class Game
     # Check for tie
     # Are all the cells on the board are filled with either "X" or "O"?
     if @board.flatten.none? { |cell| cell == " " }
-      return "Tie"
+      return "Draw"
     end
 
     # Game is not over yet
