@@ -2,11 +2,11 @@
 require 'bundler'
 Bundler.require
 
-# Require the display module
+#Require the display module
 require_relative "lib/display"
 require_relative "lib/player"
-require_relative "lib/board"
-require_relative "lib/game"
+#require_relative "lib/board"
+#require_relative "lib/game"
 
 # Define the Game class
 class Game
