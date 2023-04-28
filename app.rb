@@ -5,6 +5,8 @@ Bundler.require
 # Require the display module
 require_relative "lib/display"
 require_relative "lib/player"
+require_relative "lib/board"
+require_relative "lib/game"
 
 # Define the Game class
 class Game
@@ -72,24 +74,26 @@ class Game
 
   # Check if the game is over
   def game_over
-    # Check rows
+    # Are all elements in a row of the game board the same?
     @board.each do |row|
       if row.uniq.length == 1 && row[0] != " "
         return row[0]
       end
     end
 
-    # Check columns
+    # Are all elements in a column of the game board the same?
     @board.transpose.each do |col|
       if col.uniq.length == 1 && col[0] != " "
         return col[0]
       end
     end
 
-    # Check diagonals
+    # Are all elements in a diagonal of the game board the same?
+    # Right diagonal?
     if [@board[0][0], @board[1][1], @board[2][2]].uniq.length == 1 && @board[0][0] != " "
       return @board[0][0]
     end
+    # Left diagonal?
     if [@board[0][2], @board[1][1], @board[2][0]].uniq.length == 1 && @board[0][2] != " "
       return @board[0][2]
     end
