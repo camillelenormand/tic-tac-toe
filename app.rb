@@ -117,10 +117,14 @@ class Game
     until game_over
       # Display the game board
       display_board
-      # Make a move for the current player
+      # Current player makes a move 
       make_move(current_player, current_symbol)
       # Switch to the other player
-      current_player, current_symbol = current_symbol == @symbol1 ? [@player2, @symbol2] : [@player1, @symbol1]
+      current_player, current_symbol = if current_symbol == @symbol1
+                                          [@player2, @symbol2]
+                                      else
+                                          [@player1, @symbol1]
+                                      end    
     end
     # Display the final game board
     display_board
