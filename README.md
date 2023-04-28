@@ -6,6 +6,8 @@ Tic Tac Toe Game is a paper-and-pencil game for two players who take turns marki
 
 - Clone the repository
 - Launch the game with app.rb file
-
+- Enter first player's name 
+- Enter second player's name 
+- Play together
 
 
