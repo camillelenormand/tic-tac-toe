@@ -1,4 +1,3 @@
-# Game need two players
 class Player
   attr_reader :name, :symbol
 
